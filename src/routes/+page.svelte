@@ -1,6 +1,1 @@
-<script lang="ts">
-</script>
-
-
-
-<style lang="scss"></style>
+<h1>Homepage</h1>

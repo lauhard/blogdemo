@@ -1,1 +1,11 @@
-@import url(./lib/css/prism/prism.css);/*# sourceMappingURL=app.css.map */
+@import url(./lib/css/prism/prism.css);
+@import url(./lib/css/pico/pico.css);
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}/*# sourceMappingURL=app.css.map */
