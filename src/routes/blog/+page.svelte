@@ -2,14 +2,13 @@
     import type { PageData } from "./$types";
 
     export let data:PageData
-    console.log("data x",data.x)
-    const p= data.x
+    const files= data.files
 </script>
 
 <ul>
-    {#each p as x}
+    {#each files as file}
         <li>
-            <a href="/blog/{x.path}">{x.metadata.title}</a>
+            <a href="/blog/{file.path}">{file.metadata.title}</a>
         </li>
     {/each}
 </ul>
