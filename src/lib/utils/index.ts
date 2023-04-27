@@ -1,13 +1,16 @@
+
+
+
 export const getPosts = async () => {
-    const dataRecord = import.meta.glob('$lib/blogposts/*.md', {eager:true});
+    const dataRecord:Record<string, any> = import.meta.glob('$lib/blogposts/*.md', {eager:true});
     const metaData = Object.entries(dataRecord);
     const posts = Promise.all(
         metaData.map(async (value) => {
             const [path, meta] = value;
             const relativePath = path.slice(19, -3);
-            console.log("relativePath", relativePath);
-            const { metadata } = meta as any;
-            // const blogData:string = await meta.default.$$render();
+            const { metadata } = meta;
+            const blogData:string = await meta.default.$$render();
+            console.log("reading time", (await readingTime(blogData)).readingTime)
             return {
                 path: relativePath,
                 metadata: metadata
