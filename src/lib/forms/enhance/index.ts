@@ -13,7 +13,6 @@ export const formAction = async (event: any, callback?: (arg0: string, arg1: { f
             if(result?.data?.success) {
                 form.reset();
             }
-            // console.log("result.data",result.data)
             await invalidateAll(); // run all load functions
             await applyAction(result) // pass form data
         }

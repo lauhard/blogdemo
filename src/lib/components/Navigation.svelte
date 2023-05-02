@@ -1,7 +1,6 @@
 <script lang="ts">
 </script>
 <nav>
-    
     <ul>
         <slot></slot>
         <li><strong>Lauhard.dev</strong></li>

@@ -4,7 +4,6 @@
     import { createEventDispatcher } from 'svelte';
     export let action="";
     const dispatch = createEventDispatcher();
-//    console.log("action:", action)
 </script>
 <div class="form-wrapper">
 

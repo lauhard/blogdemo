@@ -1,5 +1,6 @@
 @import url(./lib/css/prism/prism.css);
 @import url(./lib/css/pico/pico.css);
+@import url(./lib/all.css);
 *,*::before,*::after {
     margin: 0;
     padding: 0;
@@ -7,4 +8,9 @@
 }
 html{
     box-sizing: inherit;
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+    background-color: var(--base);
+    transition: background-color 1s ease-in-out;
 }

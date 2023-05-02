@@ -4,7 +4,6 @@ import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (event) => {
    const files =  await getPosts();
-//    console.log("xxxx",x)
     return{
         files
     }

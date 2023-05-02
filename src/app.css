@@ -8,4 +8,9 @@
 
 html {
   box-sizing: inherit;
+  height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  background-color: var(--base);
+  transition: background-color 1s ease-in-out;
 }/*# sourceMappingURL=app.css.map */

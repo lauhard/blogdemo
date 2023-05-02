@@ -1,6 +1,3 @@
-
-
-
 export const getPosts = async () => {
     const dataRecord:Record<string, any> = import.meta.glob('$lib/blogposts/*.md', {eager:true});
     const metaData = Object.entries(dataRecord);
