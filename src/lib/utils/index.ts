@@ -12,6 +12,7 @@ export const getPosts = async () => {
                 path: relativePath,
                 metadata: metadata
             };
+            
         })
     )
     return posts
