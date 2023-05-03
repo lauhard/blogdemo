@@ -1,12 +1,10 @@
 <script lang="ts">
     import Form from "./Form.svelte";
     import Moon from "./svgs/Moon.svelte";
-
+    import Sun from "./svgs/Sun.svelte";
+    
     export let themeState = "dark";
     $: fadeout = themeState == "dark" ? true : false;
-    import sun from "$lib/svg/sun.svg";
-    import moon from "$lib/svg/moon.svg";
-    import Sun from "./svgs/Sun.svelte";
 
     const formActionResult = async (event: CustomEvent) => {
         const { formactionresult } = event.detail;
@@ -14,7 +12,6 @@
         const theme: string | null = action.searchParams.get("theme");
         const html = document.getElementsByTagName("html")[0];
         html.dataset.theme = theme ?? "";
-        console.log("formActionResult theme", theme);
         themeState = theme || "";
     };
 </script>
@@ -32,9 +29,7 @@
         class="toggler"
         on:click|capture={(e) => {
             fadeout = !fadeout;
-            console.log("fadeout", fadeout);
             themeState = fadeout == true ? "dark" : "light";
-            console.log("theme", themeState);
         }}
     >
         <div class="moon" class:fade-in="{fadeout==true}">
